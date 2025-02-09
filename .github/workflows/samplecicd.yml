@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: 23f1002226@ds.study.iitm.ac.in
         run: echo "Hello World!"
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated update: $(date)"
+          git push
